@@ -74,7 +74,77 @@
         .button:hover {
             background-color: #9030ff;
         }
-    
+    /* --- ESTILOS PARA LA SECCIÓN DE PUBLICACIONES --- */
+
+/* Separador visual (línea morada) */
+hr {
+    border: 0;
+    height: 1px;
+    /* Un degradado sutil para la línea */
+    background-image: linear-gradient(to right, #0f0f1c, #4a148c, #0f0f1c);
+    margin: 50px 0; /* Espacio antes y después de la línea */
+}
+
+/* Título para la nueva sección */
+h2 {
+    color: #bb86fc; /* Morado claro, igual que el h1 */
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+/* El contenedor de los recuadros (CSS Grid) */
+.publications-grid {
+    display: grid;
+    /* Crea columnas automáticas: 
+       - auto-fit: Llena el espacio.
+       - minmax(250px, 1fr): Cada columna mide mínimo 250px 
+         y máximo 1 fracción (se reparten el espacio).
+       Esto lo hace responsive automáticamente. */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px; /* Espacio entre los recuadros */
+}
+
+/* Estilo de cada recuadro (Tarjeta) */
+.card {
+    background-color: #1a1a2e; /* El fondo oscuro del 'body' para contraste */
+    border: 1px solid #4a148c; /* Borde morado oscuro */
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+    /* Transición suave para el efecto hover */
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px); /* Se eleva un poco */
+    border-color: #bb86fc; /* El borde se vuelve morado brillante */
+}
+
+/* Título de la tarjeta */
+.card h3 {
+    color: #bb86fc; /* Morado claro */
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+/* Párrafo de la tarjeta (más pequeño) */
+.card p {
+    font-size: 0.9em;
+    color: #c7c7c7;
+    margin-bottom: 20px;
+}
+
+/* Enlace "Leer más" de la tarjeta */
+.card-link {
+    color: #bb86fc;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 0.9em;
+}
+
+.card-link:hover {
+    text-decoration: underline;
+}
     </style> </head> <body>
     <div class="container">
         
@@ -82,17 +152,34 @@
 
         <h1>CR0W</h1>
        <p>
-            Soy Técnico Superior en Ciberseguridad, especializado en la intersección de la <strong>Inteligencia Artificial</strong> y la <strong>seguridad digital</strong>. Mi enfoque principal abarca la <strong>informática forense</strong>, el <strong>OSINT</strong> (Inteligencia de Fuentes Abiertas) y el <strong>pentesting</strong>.
-        </p>
-        <p>
-            Como entusiasta de la cultura <em>Capture The Flag</em> (CTF) y un ávido usuario de <strong>Linux</strong> y <strong>PowerShell</strong>, me apasiona analizar sistemas, desentrañar amenazas y automatizar la defensa.
-        </p>
-        <p>
             En este espacio comparto análisis técnicos, guías y herramientas avanzadas sobre ciberseguridad, <em>forensics</em>, IA aplicada y estrategias de <em>pentesting</em>.
         </p>
         <div class="button-container">
             <a href="#" class="button">WriteUps</a>
         </div>
-    </div>
-</body>
+
+        <hr> <h2>Últimas Publicaciones</h2>
+
+        <div class="publications-grid">
+            
+            <div class="card">
+                <h3>Análisis de un Ataque Web</h3>
+                <p>Desglosamos la cadena de ataque que explotó una simple SQL Injection para tomar control total de un servidor</p>
+                <a href="#" class="card-link">Leer más &rarr;</a>
+            </div>
+
+            <div class="card">
+                <h3>Automatización OSINT con Python</h3>
+                <p>Script para automatizar la recolección de información de fuentes abiertas y correlacionar datos de múltiples APIs.</p>
+                <a href="#" class="card-link">Leer más &rarr;</a>
+            </div>
+
+            <div class="card">
+                <h3>Guía de Hardening en Linux</h3>
+                <p>Pasos esenciales para asegurar un servidor Linux, desde la configuración del firewall hasta la gestión de permisos.</p>
+                <a href="#" class="card-link">Leer más &rarr;</a>
+            </div>
+
+        </div>
+        </div> </body>
 </html>
