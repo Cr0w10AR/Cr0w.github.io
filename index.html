@@ -134,10 +134,18 @@
         .card-link:hover {
             text-decoration: underline;
         }
-          /* Contenedor para el badge */
+        /* Contenedor para el badge */
 .badge-container {
-    text-align: center; /* Centra el badge */
-    margin-top: 40px;  /* Espacio generoso desde la biografía */
+    position: absolute; /* Lo saca del flujo normal */
+    top: 40px;  /* Distancia desde arriba (igual que el margen del container) */
+    left: 40px; /* Distancia desde la izquierda */
+}
+        /* --- Media Query para Responsive --- */
+/* Oculta el badge en pantallas más pequeñas (como móviles) */
+@media (max-width: 1200px) {
+    .badge-container {
+        display: none; /* Oculta el badge */
+    }
 }
     </style> 
 </head> 
