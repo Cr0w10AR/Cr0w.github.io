@@ -1,10 +1,91 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
-  <title>Mi Primera GitHub Page</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Página con Estilo Oscuro</title>
+    <style>
+        /* Estilos CSS aquí */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #1a1a2e; /* Negro muy oscuro, casi azul noche */
+            color: #e0e0e0; /* Gris claro para el texto principal */
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 20px;
+            background-color: #0f0f1c; /* Fondo más oscuro para el contenido */
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+            border: 1px solid #4a148c; /* Borde morado oscuro */
+        }
+
+        h1 {
+            color: #bb86fc; /* Morado claro brillante para el título */
+            text-align: center;
+            margin-bottom: 20px;
+            text-shadow: 0 0 5px rgba(187, 134, 252, 0.5);
+        }
+
+        p {
+            color: #c7c7c7; /* Gris un poco más claro para los párrafos */
+            text-align: justify;
+            margin-bottom: 15px;
+        }
+
+        .button-container {
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 12px 25px;
+            background-color: #6200ee; /* Morado intenso para el botón */
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            font-weight: bold;
+            border: none;
+            cursor: pointer;
+            box-shadow: 0 3px 10px rgba(98, 0, 238, 0.4);
+        }
+
+        .button:hover {
+            background-color: #9030ff; /* Morado más claro al pasar el ratón */
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(98, 0, 238, 0.6);
+        }
+
+        /* Puedes añadir más estilos aquí, por ejemplo para enlaces, etc. */
+        a {
+            color: #bb86fc; /* Enlaces en el mismo tono morado que el título */
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
 </head>
 <body>
-  <h1>¡Hola Mundo con GitHub Pages!</h1>
-  <p>Esta es mi nueva página web alojada en GitHub.</p>
+    <div class="container">
+        <h1>Bienvenido a Mi Espacio Oscuro y Morado</h1>
+        <p>
+            Esta es una página de ejemplo con un diseño moderno, utilizando una paleta de colores basada en tonos oscuros y toques vibrantes de morado. El fondo es un negro muy profundo, casi azul noche, que proporciona un contraste elegante con el texto claro.
+        </p>
+        <p>
+            Hemos añadido un contenedor central para el contenido principal, dándole un fondo ligeramente más oscuro y un borde sutil para que destaque. Los títulos resaltan con un morado brillante, mientras que los párrafos mantienen un tono gris suave para facilitar la lectura.
+        </p>
+        <div class="button-container">
+            <a href="#" class="button">Explorar Más</a>
+        </div>
+    </div>
 </body>
-</html> 
+</html>
