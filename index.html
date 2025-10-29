@@ -44,7 +44,17 @@
             display: block; /* Ayuda a centrar la imagen si se usa margin: auto */
             margin-left: auto;
             margin-right: auto;
-        }
+        }  
+        /* Estilos para el logo circular */
+.circular-logo {
+    width: 150px; /* Tamaño fijo para el logo (puedes ajustar este valor) */
+    height: 150px; /* Misma altura para que sea un círculo perfecto */
+    border-radius: 50%; /* Hace que la imagen sea circular */
+    object-fit: cover; /* Asegura que la imagen no se distorsione al ser circular */
+    border: 4px solid #bb86fc; /* Borde morado para el logo */
+    margin-bottom: 30px; /* Espacio debajo del logo */
+    box-shadow: 0 0 15px rgba(187, 134, 252, 0.6); /* Sombra para resaltarlo */
+}
 
         .button-container {
             text-align: center;
@@ -68,13 +78,12 @@
     </style> </head> <body>
     <div class="container">
         
-        <img src="Logo Cuervo.png" alt="Logo de Cuervo">
+        <img src="Logo Cuervo.png" alt="Logo de Cuervo" class="circular-logo">
 
         <h1>CR0W</h1>
         <p>
-Tecnico Superior en Ciberseguridad, apansionado por la Tecnologia y la Inteligencia Artificial. CTF player y forense informatico con especialidad en el OSINT, Linux, PowerShell.
-        <p>
-Contenido exclusivo de ciberseguridad, OSINT, pentesting, Forensics, Inteligencia Artificial, Herramientas, etc
+            Tecnico Superior en Ciberseguridad, apasionado por la Tecnologia y la Inteligencia Artificial. CTF player y forense informatico con especialidad en el OSINT, Linux, PowerShell.
+        </p> <p> Contenido exclusivo de ciberseguridad, OSINT, pentesting, Forensics, Inteligencia Artificial, Herramientas, etc.
         </p>
         <div class="button-container">
             <a href="#" class="button">Explorar Más</a>
