@@ -5,13 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portafolio - CROW</title>
     <style>
+        /* --- ESTILO PARA EL SCROLL SUAVE (CAMBIO AQUÍ) --- */
+        html {
+            scroll-behavior: smooth;
+        }
+
         /* --- TUS ESTILOS CSS --- */
         body {
             font-family: 'Arial', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #1a1a2e; /* Negro muy oscuro, casi azul noche */
-            color: #e0e0e0; /* Gris claro para el texto principal */
+            background-color: #1a1a2e;
+            color: #e0e0e0;
             line-height: 1.6;
         }
 
@@ -19,15 +24,14 @@
             max-width: 900px;
             margin: 40px auto;
             padding: 20px;
-            background-color: #0f0f1c; /* Fondo más oscuro para el contenido */
+            background-color: #0f0f1c;
             border-radius: 8px;
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
-            border: 1px solid #4a148c; /* Borde morado oscuro */
+            border: 1px solid #4a148c;
         }
 
-        /* --- ESTILOS QUE FALTABAN (de mi código anterior) --- */
         h1 {
-            color: #bb86fc; /* Morado claro brillante para el título */
+            color: #bb86fc;
             text-align: center;
         }
 
@@ -35,26 +39,25 @@
             color: #c7c7c7;
         }
         
-        /* Estilo para TODAS las imágenes (incluyendo tu logo) */
         img {
             max-width: 100%;
             height: auto;
             border-radius: 8px;
             margin-top: 20px;
-            display: block; /* Ayuda a centrar la imagen si se usa margin: auto */
+            display: block;
             margin-left: auto;
             margin-right: auto;
         }  
         /* Estilos para el logo circular */
-.circular-logo {
-    width: 150px; /* Tamaño fijo para el logo (puedes ajustar este valor) */
-    height: 150px; /* Misma altura para que sea un círculo perfecto */
-    border-radius: 50%; /* Hace que la imagen sea circular */
-    object-fit: cover; /* Asegura que la imagen no se distorsione al ser circular */
-    border: 4px solid #bb86fc; /* Borde morado para el logo */
-    margin-bottom: 30px; /* Espacio debajo del logo */
-    box-shadow: 0 0 15px rgba(187, 134, 252, 0.6); /* Sombra para resaltarlo */
-}
+        .circular-logo {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid #bb86fc;
+            margin-bottom: 30px;
+            box-shadow: 0 0 15px rgba(187, 134, 252, 0.6);
+        }
 
         .button-container {
             text-align: center;
@@ -74,91 +77,89 @@
         .button:hover {
             background-color: #9030ff;
         }
-    /* --- ESTILOS PARA LA SECCIÓN DE PUBLICACIONES --- */
+    
+        /* --- ESTILOS PARA LA SECCIÓN DE PUBLICACIONES --- */
+        hr {
+            border: 0;
+            height: 1px;
+            background-image: linear-gradient(to right, #0f0f1c, #4a148c, #0f0f1c);
+            margin: 50px 0;
+        }
 
-/* Separador visual (línea morada) */
-hr {
-    border: 0;
-    height: 1px;
-    /* Un degradado sutil para la línea */
-    background-image: linear-gradient(to right, #0f0f1c, #4a148c, #0f0f1c);
-    margin: 50px 0; /* Espacio antes y después de la línea */
-}
+        h2 {
+            color: #bb86fc;
+            text-align: center;
+            margin-bottom: 30px;
+        }
 
-/* Título para la nueva sección */
-h2 {
-    color: #bb86fc; /* Morado claro, igual que el h1 */
-    text-align: center;
-    margin-bottom: 30px;
-}
+        .publications-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
 
-/* El contenedor de los recuadros (CSS Grid) */
-.publications-grid {
-    display: grid;
-    /* Crea columnas automáticas: 
-       - auto-fit: Llena el espacio.
-       - minmax(250px, 1fr): Cada columna mide mínimo 250px 
-         y máximo 1 fracción (se reparten el espacio).
-       Esto lo hace responsive automáticamente. */
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px; /* Espacio entre los recuadros */
-}
+        .card {
+            background-color: #1a1a2e;
+            border: 1px solid #4a148c;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+            transition: transform 0.3s ease, border-color 0.3s ease;
+        }
 
-/* Estilo de cada recuadro (Tarjeta) */
-.card {
-    background-color: #1a1a2e; /* El fondo oscuro del 'body' para contraste */
-    border: 1px solid #4a148c; /* Borde morado oscuro */
-    border-radius: 8px;
-    padding: 20px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
-    /* Transición suave para el efecto hover */
-    transition: transform 0.3s ease, border-color 0.3s ease;
-}
+        .card:hover {
+            transform: translateY(-5px);
+            border-color: #bb86fc;
+        }
 
-.card:hover {
-    transform: translateY(-5px); /* Se eleva un poco */
-    border-color: #bb86fc; /* El borde se vuelve morado brillante */
-}
+        .card h3 {
+            color: #bb86fc;
+            margin-top: 0;
+            margin-bottom: 15px;
+        }
 
-/* Título de la tarjeta */
-.card h3 {
-    color: #bb86fc; /* Morado claro */
-    margin-top: 0;
-    margin-bottom: 15px;
-}
+        .card p {
+            font-size: 0.9em;
+            color: #c7c7c7;
+            margin-bottom: 20px;
+        }
 
-/* Párrafo de la tarjeta (más pequeño) */
-.card p {
-    font-size: 0.9em;
-    color: #c7c7c7;
-    margin-bottom: 20px;
-}
+        .card-link {
+            color: #bb86fc;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 0.9em;
+        }
 
-/* Enlace "Leer más" de la tarjeta */
-.card-link {
-    color: #bb86fc;
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 0.9em;
-}
-
-.card-link:hover {
-    text-decoration: underline;
-}
-    </style> </head> <body>
+        .card-link:hover {
+            text-decoration: underline;
+        }
+    </style> 
+</head> 
+<body>
     <div class="container">
         
         <img src="Logo Cuervo.png" alt="Logo de Cuervo" class="circular-logo">
 
         <h1>CR0W</h1>
-       <p>
+        
+        <p>
+            Soy Técnico Superior en Ciberseguridad, especializado en la intersección de la <strong>Inteligencia Artificial</strong> y la <strong>seguridad digital</strong>. Mi enfoque principal abarca la <strong>informática forense</strong>, el <strong>OSINT</strong> (Inteligencia de Fuentes Abiertas) y el <strong>pentesting</strong>.
+        </p>
+        <p>
+            Como entusiasta de la cultura <em>Capture The Flag</em> (CTF) y un ávido usuario de <strong>Linux</strong> y <strong>PowerShell</strong>, me apasiona analizar sistemas, desentrañar amenazas y automatizar la defensa.
+        </p>
+        <p>
             En este espacio comparto análisis técnicos, guías y herramientas avanzadas sobre ciberseguridad, <em>forensics</em>, IA aplicada y estrategias de <em>pentesting</em>.
         </p>
+        
         <div class="button-container">
-            <a href="#" class="button">WriteUps</a>
+            <a href="#publicaciones" class="button">WriteUps</a>
         </div>
 
-        <hr> <h2>Últimas Publicaciones</h2>
+        <hr> 
+        
+        <h2 id="publicaciones">Últimas Publicaciones</h2>
 
         <div class="publications-grid">
             
@@ -181,5 +182,6 @@ h2 {
             </div>
 
         </div>
-        </div> </body>
+    </div> 
+</body>
 </html>
